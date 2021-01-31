@@ -1,15 +1,24 @@
 #<KvLang>
 <Container>
-    padding: 30
-    spacing: 30
+
+    orientation:'vertical'
+    
+    MDToolbar:
+        type: 'top'
+        title: 'Countify'
+        left_action_items: [["cart-plus", lambda x: x]]
+        right_action_items: [["menu", lambda x: x]]
 
 
-    MDRectangleFlatButton:
-        text: 'Ustal budżet'
-        pos_hint: {"center_x": 0, "center_y": 0.5}
+    MDBoxLayout:
 
-    MDRectangleFlatButton:
-        text: 'Historia zakupów'
-        pos_hint: {"center_x": 0, "center_y": 0.5}
 
-#</KvLang>
+
+
+    MDBottomAppBar:    
+        MDToolbar:
+            elevation: 0
+            icon: 'cart-plus'
+            type: 'bottom'
+            mode: "free-center"
+
