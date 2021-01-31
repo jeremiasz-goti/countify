@@ -1,23 +1,22 @@
 #<KvLang>
 <Container>
-
     orientation:'vertical'
+    padding: 0
     
     MDToolbar:
         type: 'top'
         title: 'Countify'
         left_action_items: [["cart-plus", lambda x: x]]
         right_action_items: [["menu", lambda x: x]]
-
-
-    MDBoxLayout:
-
-
-
+    BoxLayout:
+        spacing: 10
+        MDTextField:            
+            hint_text: "Ustal budżet"
+            pos_hint: {"center_x": .5, "center_y": 0.9}
 
     MDBottomAppBar:    
         MDToolbar:
-            elevation: 0
+            elevation: 8
             icon: 'cart-plus'
             type: 'bottom'
             mode: "free-center"
