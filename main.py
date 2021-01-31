@@ -1,15 +1,26 @@
-import kivy
+from kivy.uix.screenmanager import Screen
+
+from kivymd.app import MDApp
+from kivymd.uix.button import MDRectangleFlatButton
 
 
-from kivy.app import App
-from kivy.uix.label import Label
-
-
-class MyApp(App):
-
+class Countify(MDApp):
     def build(self):
-        return Label(text='Hello world')
+        screen = Screen()
+        screen.add_widget(
+            MDRectangleFlatButton(
+                text="Ustal budżet",
+                pos_hint={"center_x": 0.5, "center_y": 0.55},
+            )
+        )
+        screen.add_widget(    
+            MDRectangleFlatButton(
+                text="Historia zakupów",
+                pos_hint={"center_x": 0.5, "center_y": 0.45},
+            )
+        )
+
+        return screen
 
 
-if __name__ == '__main__':
-    MyApp().run()
+Countify().run()
