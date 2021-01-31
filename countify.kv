@@ -8,15 +8,17 @@
         title: 'Countify'
         left_action_items: [["cart-plus", lambda x: x]]
         right_action_items: [["menu", lambda x: x]]
+        
     BoxLayout:
-        spacing: 10
+        spacing: 0
+        padding: 10
         MDTextField:            
             hint_text: "Ustal budżet"
             pos_hint: {"center_x": .5, "center_y": 0.9}
 
     MDBottomAppBar:    
         MDToolbar:
-            elevation: 8
+            elevation: 0
             icon: 'cart-plus'
             type: 'bottom'
             mode: "free-center"
