@@ -12,9 +12,9 @@ from kivymd.uix.button import MDRectangleFlatButton, MDTextButton
 class Container(MDBoxLayout):
     pass
 
-class Countify(MDApp):
+class mynurse(MDApp):
     def build(self):
         return Container()
 
 Window.size = (300, 500)
-Countify().run()
+mynurse().run()
