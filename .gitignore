@@ -2,3 +2,4 @@
 countify_venv/
 .buildozer/
 bin/
+icons.py
