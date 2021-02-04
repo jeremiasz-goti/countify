@@ -1,23 +1,34 @@
-ViewManager:
-    HomeScreen:
-        name: "home"
-        MDToolbar:
-            type: "top"
-            title: "myNurse"
-       
-        MDBottomNavigation:
+MDBoxLayout:
+    orientation:'vertical'
+    padding: 0
+    
+    MDToolbar:
+        type: 'top'
+        title: 'myNurse'
+        right_action_items: [["menu", lambda x: x]]
 
-            MDBottomNavigationItem:
-                icon: "home"
-            MDBottomNavigationItem:
-                icon: "pill"          
-            MDBottomNavigationItem:
-                icon: "doctor"
-            MDBottomNavigationItem:
-                icon: "book-open-page-variant"
-            
-            
-        
-    PillScreen:
-    DoctorScreen:
-    BookScreen:
+    MDBottomNavigation:
+        MDBottomNavigationItem:
+            name: "home"
+            icon: "home"
+            MDLabel:
+                text: "home screen"
+                pos_hint: {"center_x": .85, "center_y": .8} 
+        MDBottomNavigationItem:
+            name: "pill"
+            icon: "pill"
+            MDLabel:
+                text: "pill screen"
+                pos_hint: {"center_x": .85, "center_y": .8}         
+        MDBottomNavigationItem:
+            name: "doctor"
+            icon: "doctor"
+            MDLabel:
+                text: "doctor screen"
+                pos_hint: {"center_x": .85, "center_y": .8}   
+        MDBottomNavigationItem:
+            name: "book"
+            icon: "book-open-page-variant"
+            MDLabel:
+                text: "book screen"  
+                pos_hint: {"center_x": .85, "center_y": .8} 

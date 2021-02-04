@@ -5,6 +5,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.app import MDApp
 from kivymd.uix.boxlayout import MDBoxLayout
 
+
 class HomeScreen(Screen):
     pass
 
@@ -20,10 +21,9 @@ class BookScreen(Screen):
 class ViewManager(ScreenManager):
     pass
 
-
-
 class mynurse(MDApp):
     def build(self):
+        self.theme_cls.primary_palette = "Red"
         kv = Builder.load_file('main.kv')
         return kv
 
