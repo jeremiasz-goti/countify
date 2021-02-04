@@ -3,3 +3,4 @@ countify_venv/
 .buildozer/
 bin/
 icons.py
+mynurse_old.kv
