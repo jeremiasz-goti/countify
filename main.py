@@ -4,12 +4,18 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 
 from kivymd.app import MDApp
 from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.floatlayout import FloatLayout
+from kivymd.uix.tab import MDTabsBase
+from kivymd.icon_definitions import md_icons
 
 
 class HomeScreen(Screen):
     pass
 
 class PillScreen(Screen):
+    pass
+
+class Tab(FloatLayout, MDTabsBase):
     pass
 
 class DoctorScreen(Screen):

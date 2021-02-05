@@ -1,6 +1,6 @@
 MDBoxLayout:
     orientation:'vertical'
-    padding: 0
+
     
     MDToolbar:
         type: 'top'
@@ -8,27 +8,44 @@ MDBoxLayout:
         right_action_items: [["menu", lambda x: x]]
 
     MDBottomNavigation:
+
         MDBottomNavigationItem:
             name: "home"
             icon: "home"
-            MDLabel:
-                text: "home screen"
-                pos_hint: {"center_x": .85, "center_y": .8} 
+            MDBoxLayout:
+                padding: 10
+                MDLabel:
+                    text: "ekran główny gdzie będziemy trzymać nie wiadomo jeszcze co"
+                    halign: "center"
+        
         MDBottomNavigationItem:
             name: "pill"
             icon: "pill"
-            MDLabel:
-                text: "pill screen"
-                pos_hint: {"center_x": .85, "center_y": .8}         
+            MDBoxLayout:
+                padding: 10
+                spacing: 5
+                
+                MDLabel:
+                    text: "lek 1"
+                MDProgressBar:
+                    value: 50
+
+
+        
         MDBottomNavigationItem:
             name: "doctor"
             icon: "doctor"
-            MDLabel:
-                text: "doctor screen"
-                pos_hint: {"center_x": .85, "center_y": .8}   
+            MDBoxLayout:
+                padding: 10
+                MDLabel:
+                    text: "pole szukania + automatyczna lokalizacja do szukania specjalisty"
+                    halign: "center"   
+            
         MDBottomNavigationItem:
             name: "book"
             icon: "book-open-page-variant"
-            MDLabel:
-                text: "book screen"  
-                pos_hint: {"center_x": .85, "center_y": .8} 
+            MDBoxLayout:
+                padding: 10    
+                MDLabel:
+                    text: "encyklopedia lekow - u gory pole szukania a ponizej przewijana lista lekow"  
+                    halign: "center"
