@@ -49,15 +49,20 @@ MDBoxLayout:
             icon: "doctor"
             MDBoxLayout:
                 padding: 10
-                MDLabel:
-                    text: "pole szukania + automatyczna lokalizacja do szukania specjalisty"
-                    halign: "center"   
+                MDTextField:
+                    halign: "center"
+                    hint_text: "Szukaj specjalisty"
+                    helper_text: "np. Kardiolog"
+                    helper_text_mode: "on_focus" 
             
         MDBottomNavigationItem:
             name: "book"
             icon: "book-open-page-variant"
             MDBoxLayout:
-                padding: 10    
-                MDLabel:
-                    text: "encyklopedia lekow - u gory pole szukania a ponizej przewijana lista lekow"  
+                padding: 10
+                spacing: 0
+                MDTextField:
                     halign: "center"
+                    hint_text: "Wyszukaj lek"
+                    helper_text: "Nazwa leku"
+                    helper_text_mode: "on_focus"
