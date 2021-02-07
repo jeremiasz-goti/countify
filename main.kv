@@ -1,6 +1,6 @@
 MDBoxLayout:
     orientation:'vertical'
-
+    padding: 0
     
     MDToolbar:
         type: 'top'
@@ -12,28 +12,26 @@ MDBoxLayout:
         MDBottomNavigationItem:
             name: "home"
             icon: "home"
+            
             MDBoxLayout:
                 orientation: "vertical"
-                padding: 20
+                spacing: 10
+                padding: "1dp"
                 MDCard:
                     orientation: "vertical"
                     padding: "1dp"
                     size_hint: None, None
                     size: "280dp", "100dp"
-                    pos_hint: {"center_x": .5, "center_y": .6}
-
+                    pos_hint: {"center_x": .5, "center_y": .8}
                     MDLabel:
-                        text: "Witaj Baśka!"
-                        theme_text_color: "Secondary"
-                        size_hint_y: None
-                        height: self.texture_size[1]
-
+                        text: "Hello World"
+                        halign: "center"
                 MDCard:
                     orientation: "vertical"
-                    padding: "8dp"
+                    padding: "1dp"
                     size_hint: None, None
                     size: "280dp", "100dp"
-                    pos_hint: {"center_x": .5, "center_y": 1}
+                    pos_hint: {"center_x": .5, "center_y": .8}
 
                     MDLabel:
                         text: "Status leków: "
@@ -50,7 +48,7 @@ MDBoxLayout:
                             icon: "check"
                 MDCard:
                     orientation: "vertical"
-                    padding: "8dp"
+                    padding: "1dp"
                     size_hint: None, None
                     size: "280dp", "100dp"
                     pos_hint: {"center_x": .5, "center_y": .25}
@@ -71,10 +69,10 @@ MDBoxLayout:
                 
                 MDCard:
                     orientation: "vertical"
-                    padding: "8dp"
+                    padding: "1dp"
                     size_hint: None, None
                     size: "280dp", "100dp"
-                    pos_hint: {"center_x": .5, "center_y": .25}
+                    pos_hint: {"center_x": .5, "center_y": .1}
 
                     MDLabel:
                         text: "Powiadomienia "
@@ -100,6 +98,7 @@ MDBoxLayout:
 
                 MDLabel:
                     text: "Poziom leków"
+                    halign: "center"
 
                 MDLabel:
                     text: "lek 1"
@@ -118,6 +117,11 @@ MDBoxLayout:
                     halign: "center"
                 MDProgressBar:
                     value: 12
+                MDLabel:
+                    text: "lek 4"
+                    halign: "center"
+                MDProgressBar:
+                    value: 59
             
 
 

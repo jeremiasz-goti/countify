@@ -40,5 +40,7 @@ class mynurse(MDApp):
         kv = Builder.load_file('main.kv')
         return kv
 
-Window.size = (300, 500)
+Window.size = (380, 720)
 mynurse().run()
+
+
