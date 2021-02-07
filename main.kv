@@ -15,9 +15,19 @@ MDBoxLayout:
             MDBoxLayout:
                 orientation: "vertical"
                 padding: 20
-                MDLabel:
-                    text: "Witaj {username}"
-                    halign: "center"
+                MDCard:
+                    orientation: "vertical"
+                    padding: "1dp"
+                    size_hint: None, None
+                    size: "280dp", "100dp"
+                    pos_hint: {"center_x": .5, "center_y": .6}
+
+                    MDLabel:
+                        text: "Witaj Baśka!"
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
                 MDCard:
                     orientation: "vertical"
                     padding: "8dp"
@@ -87,6 +97,9 @@ MDBoxLayout:
                 orientation: "vertical"
                 padding: 20
                 spacing: 5
+
+                MDLabel:
+                    text: "Poziom leków"
 
                 MDLabel:
                     text: "lek 1"
