@@ -1,0 +1,67 @@
+BoxLayout:
+    orientation: "vertical"
+    
+    MDToolbar:
+        title: "myNurse"
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("toggle")]]
+
+    NavigationLayout:
+        
+        MDNavigationDrawer:
+            id: nav_drawer
+            AnchorLayout:
+                anchor_x: "left"
+                size_hint_y: None
+                height: avatar.height
+
+                Image:
+                    id: avatar
+                    size_hint: None, None
+                    size: "56dp", "56dp"
+                    source: "kivymd.png"
+
+                MDLabel:
+                    text: "KivyMD library"
+                    font_style: "Button"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "kivydevelopment@gmail.com"
+                    font_style: "Caption"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                
+
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 10
+
+
+                OneLineIconListItem:
+                    text: "Home"
+                    on_release: screen_manager.current = "main_screen"
+
+                    IconLeftWidget:
+                        icon: "home"
+
+                OneLineIconListItem:
+                    text: "Leki"
+                    on_release: screen_manager.current = "pill_screen"
+                    IconLeftWidget:
+                        icon: "pill"
+        
+        ScreenManager:
+            id: screen_manager
+            
+            MDScreen:
+                name: "main_screen"
+                MDLabel:
+                    text: "main screen"
+                    halign: "center"
+
+            MDScreen:
+                name: "pill_screen"
+                MDLabel:
+                    text: "pill screen"
+                    halign: "center"
