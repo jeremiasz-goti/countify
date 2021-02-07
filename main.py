@@ -36,7 +36,7 @@ class ContentNavigationDrawer(BoxLayout):
 class mynurse(MDApp):
     def build(self):
         theme_cls = ThemeManager()
-        self.theme_cls.primary_palette = "Red"
+        self.theme_cls.primary_palette = "Teal"
         kv = Builder.load_file('main.kv')
         return kv
 

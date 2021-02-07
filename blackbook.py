@@ -1,11 +1,14 @@
 from kivy.lang import Builder
 from kivymd.app import MDApp
+from kivy.uix.boxlayout import BoxLayout
 from kivymd.theming import ThemeManager
 from kivymd.uix.boxlayout import MDBoxLayout
+from kivy.uix.anchorlayout import AnchorLayout
 from kivymd.uix.navigationdrawer import NavigationLayout, MDNavigationDrawer
 
-class Container(MDBoxLayout):
+class Container(BoxLayout):
     pass
+
 
 class mynurse(MDApp):
     def build(self):

@@ -13,12 +13,73 @@ MDBoxLayout:
             name: "home"
             icon: "home"
             MDBoxLayout:
-                padding: 10
+                orientation: "vertical"
+                padding: 20
                 MDLabel:
-                    text: "ekran główny gdzie będziemy trzymać nie wiadomo jeszcze co"
+                    text: "Witaj {username}"
                     halign: "center"
+                MDCard:
+                    orientation: "vertical"
+                    padding: "8dp"
+                    size_hint: None, None
+                    size: "280dp", "100dp"
+                    pos_hint: {"center_x": .5, "center_y": 1}
+
+                    MDLabel:
+                        text: "Status leków: "
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+                    OneLineAvatarListItem:
+                        text: "Wszystko w normie!"
+
+                        IconLeftWidget:
+                            icon: "check"
+                MDCard:
+                    orientation: "vertical"
+                    padding: "8dp"
+                    size_hint: None, None
+                    size: "280dp", "100dp"
+                    pos_hint: {"center_x": .5, "center_y": .25}
+
+                    MDLabel:
+                        text: "Następna dawka leków za: "
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+                    OneLineAvatarListItem:
+                        text: "12 min"
+
+                        IconLeftWidget:
+                            icon: "timelapse"
                 
-        
+                MDCard:
+                    orientation: "vertical"
+                    padding: "8dp"
+                    size_hint: None, None
+                    size: "280dp", "100dp"
+                    pos_hint: {"center_x": .5, "center_y": .25}
+
+                    MDLabel:
+                        text: "Powiadomienia "
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+                    OneLineAvatarListItem:
+                        text: "Masz 0 powiadomień"
+
+                        IconLeftWidget:
+                            icon: "thumb-up-outline"
+
         MDBottomNavigationItem:
             name: "pill"
             icon: "pill"
@@ -26,25 +87,25 @@ MDBoxLayout:
                 orientation: "vertical"
                 padding: 20
                 spacing: 5
+
                 MDLabel:
                     text: "lek 1"
                     halign: "center"
                 MDProgressBar:
                     value: 23
+
                 MDLabel:
                     text: "lek 2"
                     halign: "center"
                 MDProgressBar:
                     value: 72
+
                 MDLabel:
                     text: "lek 3"
                     halign: "center"
                 MDProgressBar:
                     value: 12
-                MDRectangleFlatIconButton:
-                    icon: "pill"
-                    text: "Zarządzaj lekami"
-                    valign: "center"
+            
 
 
 
