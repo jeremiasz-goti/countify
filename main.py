@@ -12,26 +12,6 @@ from kivymd.uix.tab import MDTabsBase
 from kivymd.icon_definitions import md_icons
 
 
-class HomeScreen(Screen):
-    pass
-
-class PillScreen(Screen):
-    pass
-
-class Tab(FloatLayout, MDTabsBase):
-    pass
-
-class DoctorScreen(Screen):
-    pass
-
-class BookScreen(Screen):
-    pass
-
-class ViewManager(ScreenManager):
-    pass
-
-class ContentNavigationDrawer(BoxLayout):
-    pass
 
 class mynurse(MDApp):
     def build(self):
